@@ -1,0 +1,12 @@
+﻿<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<button text='txt' id='NoteEditButton' on-click='OpenNoteEditMenu' pref-width='7.5' pref-height='7.5' anchor-pos-x='57.5' anchor-pos-y='-14' hover-hint='Modify the note on the map!'/>
+	<modal clickerino-offerino-closerino='true' active='false' id='NoteEditMenu' size-delta-x='60' size-delta-y='30' pref-width='60' pref-height='30' pad='5'>
+		<vertical pref-width='55' pref-height='30'>
+			<string-setting value='NoteValue' on-change='NoteEntered' text='Note' font-size='3'/>
+			<horizontal>
+				<action-button text='Save' on-click='SaveNote'/>
+				<button text='Cancel' on-click='CloseNoteEditMenu'/>
+			</horizontal>
+		</vertical>
+	</modal>
+</bg>
