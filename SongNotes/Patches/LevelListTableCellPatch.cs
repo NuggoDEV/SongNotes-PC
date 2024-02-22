@@ -18,7 +18,11 @@ namespace SongNotes.Patches
         {
             if (_hoverHintController == null)
                 _hoverHintController = Resources.FindObjectsOfTypeAll<HoverHintController>().FirstOrDefault();
-            HoverHint hint = __instance.gameObject.AddComponent<HoverHint>();
+
+            if (!__instance.gameObject.GetComponent<HoverHint>())
+                __instance.gameObject.AddComponent<HoverHint>();
+
+            HoverHint hint = __instance.gameObject.GetComponent<HoverHint>();
             hint.text = Configuration.GetInstance().GetNoteForSong(level.levelID);
             hint.SetField("_hoverHintController", _hoverHintController);
 
