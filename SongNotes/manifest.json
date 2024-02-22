@@ -3,8 +3,8 @@
   "id": "SongNotes",
   "name": "SongNotes",
   "author": "Nuggo",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Add notes to any Beatmap",
   "gameVersion": "1.34.2",
   "dependsOn": {
     "BSIPA": "^4.3.2",
